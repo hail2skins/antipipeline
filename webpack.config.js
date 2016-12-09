@@ -15,7 +15,7 @@ module.exports = {
   },
 
   output: {
-    path: __dirname + "/public",
+    path: __dirname + "/vendor",
     filename: js_output_template,
   },
 
@@ -42,7 +42,7 @@ module.exports = {
     function() {
       // delete previous outputs
       this.plugin("compile", function() {
-        let basepath = __dirname + "/public";
+        let basepath = __dirname + "/vendor";
         let paths = ["/javascripts", "/stylesheets"];
 
         for (let x = 0; x < paths.length; x++) {
